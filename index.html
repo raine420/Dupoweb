@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Website</title>
+    <!-- External CSS Link (uncomment if using external stylesheet) -->
+    <!-- <link rel="stylesheet" href="stylie.css"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Layout */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Profile Section */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        /* Animate the profile picture */
+        .profile-pic:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Button Styling */
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+        }
+
+        /* Button Hover Animation */
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.1); /* Slightly increase the size on hover */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Background for About */
+        #about {
+            background-image: url('your-background-image.jpg'); /* Add your background image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dupo Personal Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="profile-container">
+            <!-- Profile Picture -->
+            <img src="your-profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+            <button class="btn" onclick="showDetails()">Show More</button>
+        </div>
+        <p id="details" style="display: none;">I am passionate about programming and always eager to improve my skills. My hobbies include reading, traveling, and photography.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Pogi</h2>
+        <p>pogi ko talaga</p>
+    </section>
+
+    <footer>
+        <p>Created by Johann Riomel D. Botor</p>
+    </footer>
+
+    <script>
+        function showDetails() {
+            const details = document.getElementById('details');
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
